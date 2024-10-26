@@ -12,7 +12,7 @@ interface formDataInrFace {
 }
 interface inputFieldProps {
     labelContent: string;
-    value: string,
+    value?: string,
     field: string,
     setValue: React.Dispatch<React.SetStateAction<formDataInrFace>>
     textArea?: boolean,

@@ -8,8 +8,8 @@ interface formDataInrFace {
     email: string,
     phone: string,
     description: string,
-    refFirstName: string,
-    refLastName: string
+    refFirstName?: string,
+    refLastName?: string
 }
 
 const PatientNameForm: React.FC = () => {
@@ -66,17 +66,17 @@ const PatientNameForm: React.FC = () => {
             </Typography>
             <form onSubmit={handleSubmit}>
                 <Box sx={{ marginBottom: 2, display: "flex", gap: 2 }}>
-                    <PrimaryInputField labelContent="First Name" value={formData.firstName} setValue={setFormData} feild="firstName" />
-                    <PrimaryInputField labelContent="Last Name" value={formData.lastName} setValue={setFormData} feild="lastName" />
+                    <PrimaryInputField labelContent="First Name" value={formData.firstName} setValue={setFormData} field="firstName" />
+                    <PrimaryInputField labelContent="Last Name" value={formData.lastName} setValue={setFormData} field="lastName" />
                 </Box>
                 <Box sx={{ marginBottom: 2 }}>
-                    <PrimaryInputField labelContent="Email(required)" value={formData.email} setValue={setFormData} feild="email" />
+                    <PrimaryInputField labelContent="Email(required)" value={formData.email} setValue={setFormData} field="email" />
                 </Box>
                 <Box sx={{ marginBottom: 2 }}>
-                    <PrimaryInputField labelContent="Phone(required)" value={formData.phone} setValue={setFormData} feild="phone" />
+                    <PrimaryInputField labelContent="Phone(required)" value={formData.phone} setValue={setFormData} field="phone" />
                 </Box>
                 <Box sx={{ marginBottom: 2 }}>
-                    <PrimaryInputField labelContent="Treatment of interest(required)" value={formData.description} setValue={setFormData} feild="description" />
+                    <PrimaryInputField labelContent="Treatment of interest(required)" value={formData.description} setValue={setFormData} field="description" />
                 </Box>
                 <Typography variant="h6" gutterBottom sx={{
                     fontSize: "15px",
@@ -86,8 +86,8 @@ const PatientNameForm: React.FC = () => {
                     Referring Friends Name (required)
                 </Typography>
                 <Box sx={{ marginBottom: 2, display: "flex", gap: 2 }}>
-                    <PrimaryInputField labelContent="First Name" value={formData.refFirstName} setValue={setFormData} feild="refFirstName" />
-                    <PrimaryInputField labelContent="Last Name" value={formData.refLastName} setValue={setFormData} feild="refLastName" />
+                    <PrimaryInputField labelContent="First Name" value={formData.refFirstName} setValue={setFormData} field="refFirstName" />
+                    <PrimaryInputField labelContent="Last Name" value={formData.refLastName} setValue={setFormData} field="refLastName" />
                 </Box>
                 <button style={{
                     margin: 2,
